@@ -11,6 +11,12 @@
 		F47585C91DF15BAA008F084D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47585C71DF15BAA008F084D /* Main.storyboard */; };
 		F47585CB1DF15BAA008F084D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F47585CA1DF15BAA008F084D /* Assets.xcassets */; };
 		F47585CE1DF15BAA008F084D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47585CC1DF15BAA008F084D /* LaunchScreen.storyboard */; };
+		F47585DC1DF161BB008F084D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47585DB1DF161BB008F084D /* MainTabBarController.swift */; };
+		F47585DE1DF162AD008F084D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47585DD1DF162AD008F084D /* HomeViewController.swift */; };
+		F47585E01DF162C2008F084D /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47585DF1DF162C2008F084D /* MessageViewController.swift */; };
+		F47585E21DF162D2008F084D /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47585E11DF162D2008F084D /* DiscoverViewController.swift */; };
+		F47585E41DF162DE008F084D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47585E31DF162DE008F084D /* ProfileViewController.swift */; };
+		F47585E61DF2A189008F084D /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = F47585E51DF2A189008F084D /* MainVCSettings.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +26,12 @@
 		F47585CA1DF15BAA008F084D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F47585CD1DF15BAA008F084D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F47585CF1DF15BAA008F084D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F47585DB1DF161BB008F084D /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		F47585DD1DF162AD008F084D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F47585DF1DF162C2008F084D /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		F47585E11DF162D2008F084D /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		F47585E31DF162DE008F084D /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F47585E51DF2A189008F084D /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +89,7 @@
 		F47585D61DF15FCE008F084D /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				F47585E11DF162D2008F084D /* DiscoverViewController.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -84,6 +97,7 @@
 		F47585D71DF15FCE008F084D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F47585DD1DF162AD008F084D /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -91,6 +105,8 @@
 		F47585D81DF15FCE008F084D /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				F47585E51DF2A189008F084D /* MainVCSettings.json */,
+				F47585DB1DF161BB008F084D /* MainTabBarController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -98,6 +114,7 @@
 		F47585D91DF15FCE008F084D /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				F47585DF1DF162C2008F084D /* MessageViewController.swift */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -105,6 +122,7 @@
 		F47585DA1DF15FCE008F084D /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				F47585E31DF162DE008F084D /* ProfileViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -171,6 +189,7 @@
 			files = (
 				F47585CE1DF15BAA008F084D /* LaunchScreen.storyboard in Resources */,
 				F47585CB1DF15BAA008F084D /* Assets.xcassets in Resources */,
+				F47585E61DF2A189008F084D /* MainVCSettings.json in Resources */,
 				F47585C91DF15BAA008F084D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,7 +201,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F47585E41DF162DE008F084D /* ProfileViewController.swift in Sources */,
+				F47585DC1DF161BB008F084D /* MainTabBarController.swift in Sources */,
 				F47585C41DF15BAA008F084D /* AppDelegate.swift in Sources */,
+				F47585E01DF162C2008F084D /* MessageViewController.swift in Sources */,
+				F47585DE1DF162AD008F084D /* HomeViewController.swift in Sources */,
+				F47585E21DF162D2008F084D /* DiscoverViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

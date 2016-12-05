@@ -8,11 +8,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--发布-->
         <scene sceneID="W3j-Dr-DwH">
             <objects>
                 <tableViewController id="DgV-E2-Jtc" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Root View Controller" id="MYM-Lw-Ogp"/>
+                    <navigationItem key="navigationItem" title="发布" id="MYM-Lw-Ogp"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7mX-ky-ag1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

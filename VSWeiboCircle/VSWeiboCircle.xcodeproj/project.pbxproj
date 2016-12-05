@@ -100,6 +100,7 @@
 				F47585D91DF15FCE008F084D /* Message */,
 				F47585D61DF15FCE008F084D /* Discover */,
 				F47585DA1DF15FCE008F084D /* Profile */,
+				F475861B1DF5499B008F084D /* Tools */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -148,6 +149,13 @@
 				F47585E31DF162DE008F084D /* ProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		F475861B1DF5499B008F084D /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

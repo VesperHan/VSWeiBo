@@ -11,7 +11,7 @@
         <!--我-->
         <scene sceneID="Yxq-40-n5T">
             <objects>
-                <tableViewController id="j9v-rk-cK5" sceneMemberID="viewController">
+                <tableViewController id="j9v-rk-cK5" customClass="ProfileViewController" customModule="VSWeiboCircle" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qNF-W6-Has">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

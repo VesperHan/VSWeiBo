@@ -8,34 +8,14 @@
 
 import UIKit
 
-class HomeViewController: UITableViewController {
+class HomeViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        //正则表达式  对try 三种方式的使用
-        let pattern = "abc"
-        //创建正则对象
-        do {
-            _ = try NSRegularExpression.init(pattern:pattern,options:.caseInsensitive)
-        } catch  {
-            print(error)
-        }
-        
-        guard (try? NSRegularExpression.init(pattern: pattern, options: .caseInsensitive)) != nil else{
-        
-            return
-        }
-        
-        _ = try! NSRegularExpression.init(pattern: pattern, options: .caseInsensitive)
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

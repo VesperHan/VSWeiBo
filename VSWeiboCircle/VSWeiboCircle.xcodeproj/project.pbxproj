@@ -22,6 +22,7 @@
 		F47586091DF53EDF008F084D /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F475860B1DF53EDF008F084D /* Home.storyboard */; };
 		F475860C1DF53EE5008F084D /* Addition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F475860E1DF53EE5008F084D /* Addition.storyboard */; };
 		F47586121DF53F46008F084D /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47586141DF53F46008F084D /* Discover.storyboard */; };
+		F475861D1DF54A19008F084D /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475861C1DF54A19008F084D /* UIButton+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		F47586181DF5402B008F084D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Addition.strings; sourceTree = "<group>"; };
 		F47586191DF5402B008F084D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Home.strings; sourceTree = "<group>"; };
 		F475861A1DF5402B008F084D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Discover.strings; sourceTree = "<group>"; };
+		F475861C1DF54A19008F084D /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 		F475861B1DF5499B008F084D /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F475861C1DF54A19008F084D /* UIButton+Extension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				F47585E01DF162C2008F084D /* MessageViewController.swift in Sources */,
 				F47585DE1DF162AD008F084D /* HomeViewController.swift in Sources */,
 				F47585E21DF162D2008F084D /* DiscoverViewController.swift in Sources */,
+				F475861D1DF54A19008F084D /* UIButton+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,6 @@ class MainTabBarController: UITabBarController {
 
     // MARK:- 系统回调函数
    fileprivate lazy var imageNames = ["a","b","","c","d"]
-   fileprivate lazy var composeBtn = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +19,6 @@ class MainTabBarController: UITabBarController {
        tabBar.tintColor! = UIColor.orange
         
         setUpComposeBtn()
-
     }
     
     //在didload里的调整在view will appear里面会重新调整过来 所以要写在appear 里面
@@ -36,14 +34,12 @@ extension MainTabBarController {
     fileprivate func setUpComposeBtn(){
         
         //添加到tabbar中
+        let composeBtn = UIButton(image: #imageLiteral(resourceName: "tabbar_compose_icon_add"),
+                                  imageHigh: #imageLiteral(resourceName: "tabbar_compose_icon_add_highlighted"),
+                                  bgImage: #imageLiteral(resourceName: "tabbar_compose_button"),
+                                  bgImageHigh: #imageLiteral(resourceName: "tabbar_compose_button_highlighted"))
+        
         tabBar.addSubview(composeBtn)
-        composeBtn.setBackgroundImage(#imageLiteral(resourceName: "tabbar_compose_button"), for: .normal)
-        composeBtn.setBackgroundImage(#imageLiteral(resourceName: "tabbar_compose_button_highlighted"), for: .highlighted)
-        composeBtn.setImage(#imageLiteral(resourceName: "tabbar_compose_icon_add"), for: .normal)
-        composeBtn.setImage(#imageLiteral(resourceName: "tabbar_compose_icon_add_highlighted"), for: .highlighted)
-        
-        composeBtn.sizeToFit()
-        
         composeBtn.center = CGPoint(x:tabBar.center.x,y:tabBar.bounds.size.height*0.5)
         composeBtn.addTarget(self, action: #selector(composeClick(sender:)), for: .touchUpInside)
     }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="u5C-m7-aNU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="COy-Uh-bTS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,41 +9,41 @@
     </dependencies>
     <scenes>
         <!--我-->
-        <scene sceneID="Yxq-40-n5T">
+        <scene sceneID="I7v-Ap-42i">
             <objects>
-                <tableViewController id="j9v-rk-cK5" customClass="ProfileViewController" customModule="VSWeiboCircle" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qNF-W6-Has">
+                <tableViewController id="Az1-sJ-6fB" customClass="ProfileViewController" customModule="VSWeiboCircle" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qnO-Bh-FD1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
-                            <outlet property="dataSource" destination="j9v-rk-cK5" id="nIC-m2-sZo"/>
-                            <outlet property="delegate" destination="j9v-rk-cK5" id="xYi-Ji-O0Z"/>
+                            <outlet property="dataSource" destination="Az1-sJ-6fB" id="ye1-fZ-FcC"/>
+                            <outlet property="delegate" destination="Az1-sJ-6fB" id="chg-2z-GME"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="我" id="ZYW-Vl-vze" customClass="ProfileVIewController"/>
+                    <navigationItem key="navigationItem" title="我" id="IQ7-Qm-ll6"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nxr-dr-v6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wNh-qR-jTP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-575" y="1715"/>
+            <point key="canvasLocation" x="-370" y="796"/>
         </scene>
-        <!--我-->
-        <scene sceneID="OfD-zq-AdD">
+        <!--我的-->
+        <scene sceneID="HFz-bN-kfS">
             <objects>
-                <navigationController id="u5C-m7-aNU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我" image="tabbar_profile" selectedImage="tabbar_profile_highlighted" id="rZA-Qy-xcM"/>
+                <navigationController id="COy-Uh-bTS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的" image="tabbar_profile" selectedImage="tabbar_profile_highlighted" id="bAJ-6G-agB"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="552-ov-dUP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8O1-HN-xhs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="j9v-rk-cK5" kind="relationship" relationship="rootViewController" id="LjK-G8-nwa"/>
+                        <segue destination="Az1-sJ-6fB" kind="relationship" relationship="rootViewController" id="FEu-I2-8xP"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="w6v-hR-da4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bSN-Di-VIG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1422" y="1715"/>
+            <point key="canvasLocation" x="-1322" y="796"/>
         </scene>
     </scenes>
     <resources>

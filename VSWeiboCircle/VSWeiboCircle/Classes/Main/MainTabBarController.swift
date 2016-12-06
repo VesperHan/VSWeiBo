@@ -17,6 +17,7 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
 
        tabBar.tintColor! = UIColor.orange
+        UINavigationBar.appearance().tintColor = UIColor.orange
         
         setUpComposeBtn()
     }

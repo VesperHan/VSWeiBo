@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F440105E1DF6B57500028357 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440105C1DF6B57500028357 /* PopoverViewController.swift */; };
+		F440105F1DF6B57500028357 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F440105D1DF6B57500028357 /* PopoverViewController.xib */; };
+		F44010611DF79C9500028357 /* VSPresentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44010601DF79C9500028357 /* VSPresentController.swift */; };
+		F44010631DF7B94500028357 /* PopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44010621DF7B94500028357 /* PopoverAnimator.swift */; };
 		F47585C41DF15BAA008F084D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47585C31DF15BAA008F084D /* AppDelegate.swift */; };
 		F47585C91DF15BAA008F084D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47585C71DF15BAA008F084D /* Main.storyboard */; };
 		F47585CB1DF15BAA008F084D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F47585CA1DF15BAA008F084D /* Assets.xcassets */; };
@@ -26,9 +30,15 @@
 		F47586301DF5A191008F084D /* VisitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F475862F1DF5A191008F084D /* VisitorView.xib */; };
 		F475863B1DF5AA3E008F084D /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F475863A1DF5AA3E008F084D /* Profile.storyboard */; };
 		F475863D1DF5AAA2008F084D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475863C1DF5AAA2008F084D /* ProfileViewController.swift */; };
+		F475863F1DF65E97008F084D /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475863E1DF65E97008F084D /* UIBarButtonItem+Extension.swift */; };
+		F47586411DF66AD1008F084D /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47586401DF66AD1008F084D /* TitleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F440105C1DF6B57500028357 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
+		F440105D1DF6B57500028357 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
+		F44010601DF79C9500028357 /* VSPresentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSPresentController.swift; sourceTree = "<group>"; };
+		F44010621DF7B94500028357 /* PopoverAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverAnimator.swift; sourceTree = "<group>"; };
 		F47585C01DF15BAA008F084D /* VSWeiboCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VSWeiboCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47585C31DF15BAA008F084D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F47585C81DF15BAA008F084D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,6 +68,8 @@
 		F475862F1DF5A191008F084D /* VisitorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisitorView.xib; sourceTree = "<group>"; };
 		F475863A1DF5AA3E008F084D /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		F475863C1DF5AAA2008F084D /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F475863E1DF65E97008F084D /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		F47586401DF66AD1008F084D /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +83,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F440105B1DF6B53E00028357 /* Popover */ = {
+			isa = PBXGroup;
+			children = (
+				F440105C1DF6B57500028357 /* PopoverViewController.swift */,
+				F440105D1DF6B57500028357 /* PopoverViewController.xib */,
+				F44010601DF79C9500028357 /* VSPresentController.swift */,
+				F44010621DF7B94500028357 /* PopoverAnimator.swift */,
+			);
+			path = Popover;
+			sourceTree = "<group>";
+		};
 		F47585B71DF15BAA008F084D = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +157,7 @@
 		F47585D81DF15FCE008F084D /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				F440105B1DF6B53E00028357 /* Popover */,
 				F475862A1DF59FBC008F084D /* Visitor */,
 				F475860E1DF53EE5008F084D /* Addition.storyboard */,
 				F47585E51DF2A189008F084D /* MainVCSettings.json */,
@@ -164,6 +188,8 @@
 			isa = PBXGroup;
 			children = (
 				F475861C1DF54A19008F084D /* UIButton+Extension.swift */,
+				F47586401DF66AD1008F084D /* TitleButton.swift */,
+				F475863E1DF65E97008F084D /* UIBarButtonItem+Extension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -245,6 +271,7 @@
 				F47585CB1DF15BAA008F084D /* Assets.xcassets in Resources */,
 				F47585E61DF2A189008F084D /* MainVCSettings.json in Resources */,
 				F475860C1DF53EE5008F084D /* Addition.storyboard in Resources */,
+				F440105F1DF6B57500028357 /* PopoverViewController.xib in Resources */,
 				F47585FD1DF53BC4008F084D /* Message.storyboard in Resources */,
 				F47586121DF53F46008F084D /* Discover.storyboard in Resources */,
 				F47585C91DF15BAA008F084D /* Main.storyboard in Resources */,
@@ -261,8 +288,13 @@
 			files = (
 				F47585DC1DF161BB008F084D /* MainTabBarController.swift in Sources */,
 				F47585C41DF15BAA008F084D /* AppDelegate.swift in Sources */,
+				F475863F1DF65E97008F084D /* UIBarButtonItem+Extension.swift in Sources */,
 				F47585E01DF162C2008F084D /* MessageViewController.swift in Sources */,
+				F440105E1DF6B57500028357 /* PopoverViewController.swift in Sources */,
+				F47586411DF66AD1008F084D /* TitleButton.swift in Sources */,
+				F44010611DF79C9500028357 /* VSPresentController.swift in Sources */,
 				F47585DE1DF162AD008F084D /* HomeViewController.swift in Sources */,
+				F44010631DF7B94500028357 /* PopoverAnimator.swift in Sources */,
 				F475862C1DF59FF8008F084D /* BaseViewController.swift in Sources */,
 				F475862E1DF5A17E008F084D /* VisitorView.swift in Sources */,
 				F475863D1DF5AAA2008F084D /* ProfileViewController.swift in Sources */,

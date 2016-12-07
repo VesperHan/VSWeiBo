@@ -31,7 +31,7 @@ extension UIButton{
     //      - 遍历构造函数init前面需要加载convenience
     //      - 需要明确调用self.init()
     //推荐使用构造函数
-    convenience init(image:UIImage,imageHigh:UIImage,bgImage:UIImage,bgImageHigh:UIImage) {
+    convenience init(image:UIImage,imageHigh:UIImage,bgImage:UIImage?,bgImageHigh:UIImage?) {
         
         self.init()
         
@@ -41,4 +41,5 @@ extension UIButton{
         setBackgroundImage(bgImageHigh, for: .highlighted)
         sizeToFit()
     }
+    
 }

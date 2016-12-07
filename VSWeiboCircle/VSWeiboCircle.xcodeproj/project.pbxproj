@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E89A73D023ADB363D19968D /* Pods_VSWeiboCircle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC88687CC8CF01E0BEBBCD52 /* Pods_VSWeiboCircle.framework */; };
 		F440105E1DF6B57500028357 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440105C1DF6B57500028357 /* PopoverViewController.swift */; };
 		F440105F1DF6B57500028357 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F440105D1DF6B57500028357 /* PopoverViewController.xib */; };
 		F44010611DF79C9500028357 /* VSPresentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44010601DF79C9500028357 /* VSPresentController.swift */; };
@@ -35,6 +36,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		122ACD8C13871E33D29324F1 /* Pods-VSWeiboCircle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VSWeiboCircle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VSWeiboCircle/Pods-VSWeiboCircle.debug.xcconfig"; sourceTree = "<group>"; };
+		DC88687CC8CF01E0BEBBCD52 /* Pods_VSWeiboCircle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VSWeiboCircle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4CDE2B1A9274B4FC786D1CB /* Pods-VSWeiboCircle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VSWeiboCircle.release.xcconfig"; path = "Pods/Target Support Files/Pods-VSWeiboCircle/Pods-VSWeiboCircle.release.xcconfig"; sourceTree = "<group>"; };
 		F440105C1DF6B57500028357 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		F440105D1DF6B57500028357 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
 		F44010601DF79C9500028357 /* VSPresentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSPresentController.swift; sourceTree = "<group>"; };
@@ -77,12 +81,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E89A73D023ADB363D19968D /* Pods_VSWeiboCircle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FE42CD528D2A44B16621F40 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC88687CC8CF01E0BEBBCD52 /* Pods_VSWeiboCircle.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB0EA95EA65D433E1F2CE910 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				122ACD8C13871E33D29324F1 /* Pods-VSWeiboCircle.debug.xcconfig */,
+				E4CDE2B1A9274B4FC786D1CB /* Pods-VSWeiboCircle.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F440105B1DF6B53E00028357 /* Popover */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +121,8 @@
 			children = (
 				F47585C21DF15BAA008F084D /* VSWeiboCircle */,
 				F47585C11DF15BAA008F084D /* Products */,
+				BB0EA95EA65D433E1F2CE910 /* Pods */,
+				3FE42CD528D2A44B16621F40 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -211,9 +235,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F47585D21DF15BAA008F084D /* Build configuration list for PBXNativeTarget "VSWeiboCircle" */;
 			buildPhases = (
+				7B0BF917BCA9A23646880E72 /* [CP] Check Pods Manifest.lock */,
 				F47585BC1DF15BAA008F084D /* Sources */,
 				F47585BD1DF15BAA008F084D /* Frameworks */,
 				F47585BE1DF15BAA008F084D /* Resources */,
+				C6EA55D768B5FAD738CCEB6C /* [CP] Embed Pods Frameworks */,
+				40F38613C1DD0484D7028924 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -280,6 +307,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		40F38613C1DD0484D7028924 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VSWeiboCircle/Pods-VSWeiboCircle-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B0BF917BCA9A23646880E72 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C6EA55D768B5FAD738CCEB6C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VSWeiboCircle/Pods-VSWeiboCircle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F47585BC1DF15BAA008F084D /* Sources */ = {
@@ -460,6 +535,7 @@
 		};
 		F47585D31DF15BAA008F084D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 122ACD8C13871E33D29324F1 /* Pods-VSWeiboCircle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -475,6 +551,7 @@
 		};
 		F47585D41DF15BAA008F084D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4CDE2B1A9274B4FC786D1CB /* Pods-VSWeiboCircle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

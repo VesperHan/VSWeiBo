@@ -1,0 +1,6 @@
+framework module Pods_VSWeiboCircle {
+  umbrella header "Pods-VSWeiboCircle-umbrella.h"
+
+  export *
+  module * { export * }
+}

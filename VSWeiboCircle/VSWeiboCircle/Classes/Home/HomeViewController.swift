@@ -28,8 +28,6 @@ class HomeViewController: BaseViewController {
             return
         }
         setupNav()
-        
-        print(popoverAnimator.stateCallBack!)
     }
 }
 

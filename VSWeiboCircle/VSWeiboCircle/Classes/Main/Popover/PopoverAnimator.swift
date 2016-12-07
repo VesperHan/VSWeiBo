@@ -18,6 +18,7 @@ class PopoverAnimator: NSObject {
     
     // MARK:- 自定义构造函数
     // 如果自定义一个构造函数,没有对父类的构造函数进行重写,那么自定义的构造函数会覆盖父类
+    // noescape 只不允许逃逸出这个函数,只能在该函数内执行
     init(stateCallBack :@escaping (_ present:Bool)->()) {
 
         self.stateCallBack = stateCallBack

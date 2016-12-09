@@ -17,6 +17,9 @@
 		F440106A1DF816E900028357 /* OAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F44010681DF816E900028357 /* OAuthViewController.xib */; };
 		F440106C1DF9431A00028357 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440106B1DF9431A00028357 /* Common.swift */; };
 		F440106E1DF94CE100028357 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440106D1DF94CE100028357 /* UserAccount.swift */; };
+		F44010701DFA5A0D00028357 /* UserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440106F1DFA5A0D00028357 /* UserAccountViewModel.swift */; };
+		F44010741DFAA7A400028357 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44010721DFAA7A400028357 /* WelcomeViewController.swift */; };
+		F44010751DFAA7A400028357 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F44010731DFAA7A400028357 /* WelcomeViewController.xib */; };
 		F47585C41DF15BAA008F084D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47585C31DF15BAA008F084D /* AppDelegate.swift */; };
 		F47585C91DF15BAA008F084D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47585C71DF15BAA008F084D /* Main.storyboard */; };
 		F47585CB1DF15BAA008F084D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F47585CA1DF15BAA008F084D /* Assets.xcassets */; };
@@ -53,6 +56,9 @@
 		F44010681DF816E900028357 /* OAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthViewController.xib; sourceTree = "<group>"; };
 		F440106B1DF9431A00028357 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		F440106D1DF94CE100028357 /* UserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
+		F440106F1DFA5A0D00028357 /* UserAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountViewModel.swift; sourceTree = "<group>"; };
+		F44010721DFAA7A400028357 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		F44010731DFAA7A400028357 /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		F47585C01DF15BAA008F084D /* VSWeiboCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VSWeiboCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47585C31DF15BAA008F084D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F47585C81DF15BAA008F084D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -131,9 +137,19 @@
 			children = (
 				F44010671DF816E900028357 /* OAuthViewController.swift */,
 				F440106D1DF94CE100028357 /* UserAccount.swift */,
+				F440106F1DFA5A0D00028357 /* UserAccountViewModel.swift */,
 				F44010681DF816E900028357 /* OAuthViewController.xib */,
 			);
 			path = OAuth;
+			sourceTree = "<group>";
+		};
+		F44010711DFAA78400028357 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				F44010721DFAA7A400028357 /* WelcomeViewController.swift */,
+				F44010731DFAA7A400028357 /* WelcomeViewController.xib */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 		F47585B71DF15BAA008F084D = {
@@ -201,6 +217,7 @@
 		F47585D81DF15FCE008F084D /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				F44010711DFAA78400028357 /* Welcome */,
 				F44010661DF816B500028357 /* OAuth */,
 				F440105B1DF6B53E00028357 /* Popover */,
 				F475862A1DF59FBC008F084D /* Visitor */,
@@ -318,6 +335,7 @@
 				F47585CE1DF15BAA008F084D /* LaunchScreen.storyboard in Resources */,
 				F47586301DF5A191008F084D /* VisitorView.xib in Resources */,
 				F475863B1DF5AA3E008F084D /* Profile.storyboard in Resources */,
+				F44010751DFAA7A400028357 /* WelcomeViewController.xib in Resources */,
 				F47585CB1DF15BAA008F084D /* Assets.xcassets in Resources */,
 				F440106A1DF816E900028357 /* OAuthViewController.xib in Resources */,
 				F47585E61DF2A189008F084D /* MainVCSettings.json in Resources */,
@@ -386,10 +404,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F440106C1DF9431A00028357 /* Common.swift in Sources */,
+				F44010741DFAA7A400028357 /* WelcomeViewController.swift in Sources */,
 				F47585DC1DF161BB008F084D /* MainTabBarController.swift in Sources */,
 				F440106E1DF94CE100028357 /* UserAccount.swift in Sources */,
 				F47585C41DF15BAA008F084D /* AppDelegate.swift in Sources */,
 				F475863F1DF65E97008F084D /* UIBarButtonItem+Extension.swift in Sources */,
+				F44010701DFA5A0D00028357 /* UserAccountViewModel.swift in Sources */,
 				F47585E01DF162C2008F084D /* MessageViewController.swift in Sources */,
 				F44010691DF816E900028357 /* OAuthViewController.swift in Sources */,
 				F440105E1DF6B57500028357 /* PopoverViewController.swift in Sources */,

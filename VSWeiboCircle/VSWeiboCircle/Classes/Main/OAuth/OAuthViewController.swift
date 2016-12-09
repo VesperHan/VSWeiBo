@@ -89,6 +89,10 @@ extension OAuthViewController:UIWebViewDelegate{
     }
 }
 
+// 请求顺序,先请求Access_token 
+// 根据token请求当前用户信息
+// 保存当前用户信息
+// dismiss
 extension OAuthViewController{
 
     fileprivate func loadAccessToken(code:String){
@@ -138,7 +142,16 @@ extension OAuthViewController{
             account.screen_name = result["screen_name"] as? String
             account.avatar_large = result["avatar_large"] as? String
             
-            Infolog(account)
+            NSKeyedArchiver.archiveRootObject(account, toFile: UserAccountViewModel.shareIntance.accountPath)
+            //这是必要做的,因为当判断isLogin的时候已经初始化了,
+            //单例不能初始化两次,所以在读取到account对象之后,赋值给userAccount中
+            //目的:解决加载webcome的时候,读取不到头像url
+            UserAccountViewModel.shareIntance.userAccount = account
+            
+            self.dismiss(animated: true, completion: {
+              
+                UIApplication.shared.keyWindow?.rootViewController = WelcomeViewController()
+            })
         }
     }
 }

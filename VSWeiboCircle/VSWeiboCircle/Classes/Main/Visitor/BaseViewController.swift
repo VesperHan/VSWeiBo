@@ -10,14 +10,14 @@ import UIKit
 
 class BaseViewController: UITableViewController {
 
-    
-    var isLogin = false
+    var isLogin = UserAccountViewModel.shareIntance.isLogin
     lazy var visitorView = VisitorView.visitorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupNavigationItems()
+//        UIApplication.shared.keyWindow?.rootViewController = WelcomeViewController()
     }
     
     override func loadView() {

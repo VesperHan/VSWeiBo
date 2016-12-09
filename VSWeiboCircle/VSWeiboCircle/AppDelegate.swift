@@ -20,3 +20,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
+func Infolog<T>(_ message:T,file:String = #file,line:Int = #line) {
+    
+    let fileName =  (file as NSString).lastPathComponent
+    print("\(currentTime())\(fileName)Line:\(line) ->Info \n\(message)")
+}
+
+func Errolog<T>(_ message:T,file:String = #file,line:Int = #line) {
+    
+    let fileName =  (file as NSString).lastPathComponent
+    print("\(currentTime())\(fileName)Line:\(line) ->Erro \n\(message)")
+}
+
+func currentTime() -> String {
+    
+    let date = Date()
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
+    let dateStr = dateFormatter.string(from: date)
+    
+    return dateStr
+}

@@ -11,7 +11,7 @@ import UIKit
 class BaseViewController: UITableViewController {
 
     
-    var isLogin = true
+    var isLogin = false
     lazy var visitorView = VisitorView.visitorView()
     
     override func viewDidLoad() {
@@ -44,7 +44,7 @@ extension BaseViewController {
     }
 }
 
-//// MARK:- 事件监听
+// MARK:- 事件监听
 extension BaseViewController{
 
     @objc fileprivate func registerBtnClick() {
@@ -53,6 +53,8 @@ extension BaseViewController{
     }
     @objc fileprivate func loginBtnClick() {
     
-        print(2)
+        let oathVC = OAuthViewController()
+        let oathNav = UINavigationController(rootViewController: oathVC)
+        present(oathNav, animated: true, completion: nil)
     }
 }

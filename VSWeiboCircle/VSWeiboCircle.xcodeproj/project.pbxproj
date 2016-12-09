@@ -12,6 +12,11 @@
 		F440105F1DF6B57500028357 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F440105D1DF6B57500028357 /* PopoverViewController.xib */; };
 		F44010611DF79C9500028357 /* VSPresentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44010601DF79C9500028357 /* VSPresentController.swift */; };
 		F44010631DF7B94500028357 /* PopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44010621DF7B94500028357 /* PopoverAnimator.swift */; };
+		F44010651DF7EEF800028357 /* VSNetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44010641DF7EEF800028357 /* VSNetworkTools.swift */; };
+		F44010691DF816E900028357 /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44010671DF816E900028357 /* OAuthViewController.swift */; };
+		F440106A1DF816E900028357 /* OAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F44010681DF816E900028357 /* OAuthViewController.xib */; };
+		F440106C1DF9431A00028357 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440106B1DF9431A00028357 /* Common.swift */; };
+		F440106E1DF94CE100028357 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440106D1DF94CE100028357 /* UserAccount.swift */; };
 		F47585C41DF15BAA008F084D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47585C31DF15BAA008F084D /* AppDelegate.swift */; };
 		F47585C91DF15BAA008F084D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47585C71DF15BAA008F084D /* Main.storyboard */; };
 		F47585CB1DF15BAA008F084D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F47585CA1DF15BAA008F084D /* Assets.xcassets */; };
@@ -43,6 +48,11 @@
 		F440105D1DF6B57500028357 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
 		F44010601DF79C9500028357 /* VSPresentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSPresentController.swift; sourceTree = "<group>"; };
 		F44010621DF7B94500028357 /* PopoverAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverAnimator.swift; sourceTree = "<group>"; };
+		F44010641DF7EEF800028357 /* VSNetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSNetworkTools.swift; sourceTree = "<group>"; };
+		F44010671DF816E900028357 /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
+		F44010681DF816E900028357 /* OAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthViewController.xib; sourceTree = "<group>"; };
+		F440106B1DF9431A00028357 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		F440106D1DF94CE100028357 /* UserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		F47585C01DF15BAA008F084D /* VSWeiboCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VSWeiboCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47585C31DF15BAA008F084D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F47585C81DF15BAA008F084D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -116,6 +126,16 @@
 			path = Popover;
 			sourceTree = "<group>";
 		};
+		F44010661DF816B500028357 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				F44010671DF816E900028357 /* OAuthViewController.swift */,
+				F440106D1DF94CE100028357 /* UserAccount.swift */,
+				F44010681DF816E900028357 /* OAuthViewController.xib */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
 		F47585B71DF15BAA008F084D = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +201,7 @@
 		F47585D81DF15FCE008F084D /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				F44010661DF816B500028357 /* OAuth */,
 				F440105B1DF6B53E00028357 /* Popover */,
 				F475862A1DF59FBC008F084D /* Visitor */,
 				F475860E1DF53EE5008F084D /* Addition.storyboard */,
@@ -214,6 +235,8 @@
 				F475861C1DF54A19008F084D /* UIButton+Extension.swift */,
 				F47586401DF66AD1008F084D /* TitleButton.swift */,
 				F475863E1DF65E97008F084D /* UIBarButtonItem+Extension.swift */,
+				F44010641DF7EEF800028357 /* VSNetworkTools.swift */,
+				F440106B1DF9431A00028357 /* Common.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -296,6 +319,7 @@
 				F47586301DF5A191008F084D /* VisitorView.xib in Resources */,
 				F475863B1DF5AA3E008F084D /* Profile.storyboard in Resources */,
 				F47585CB1DF15BAA008F084D /* Assets.xcassets in Resources */,
+				F440106A1DF816E900028357 /* OAuthViewController.xib in Resources */,
 				F47585E61DF2A189008F084D /* MainVCSettings.json in Resources */,
 				F475860C1DF53EE5008F084D /* Addition.storyboard in Resources */,
 				F440105F1DF6B57500028357 /* PopoverViewController.xib in Resources */,
@@ -361,15 +385,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F440106C1DF9431A00028357 /* Common.swift in Sources */,
 				F47585DC1DF161BB008F084D /* MainTabBarController.swift in Sources */,
+				F440106E1DF94CE100028357 /* UserAccount.swift in Sources */,
 				F47585C41DF15BAA008F084D /* AppDelegate.swift in Sources */,
 				F475863F1DF65E97008F084D /* UIBarButtonItem+Extension.swift in Sources */,
 				F47585E01DF162C2008F084D /* MessageViewController.swift in Sources */,
+				F44010691DF816E900028357 /* OAuthViewController.swift in Sources */,
 				F440105E1DF6B57500028357 /* PopoverViewController.swift in Sources */,
 				F47586411DF66AD1008F084D /* TitleButton.swift in Sources */,
 				F44010611DF79C9500028357 /* VSPresentController.swift in Sources */,
 				F47585DE1DF162AD008F084D /* HomeViewController.swift in Sources */,
 				F44010631DF7B94500028357 /* PopoverAnimator.swift in Sources */,
+				F44010651DF7EEF800028357 /* VSNetworkTools.swift in Sources */,
 				F475862C1DF59FF8008F084D /* BaseViewController.swift in Sources */,
 				F475862E1DF5A17E008F084D /* VisitorView.swift in Sources */,
 				F475863D1DF5AAA2008F084D /* ProfileViewController.swift in Sources */,

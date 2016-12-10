@@ -12,10 +12,19 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    //计算属性
+    var defaultController:UIViewController{
+    
+        let isLogin = UserAccountViewModel.shareIntance.isLogin
+        return isLogin ? WelcomeViewController() :UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = defaultController
+        window?.makeKeyAndVisible()
         return true
     }
 }

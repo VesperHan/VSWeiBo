@@ -38,7 +38,7 @@ func Infolog<T>(_ message:T,file:String = #file,line:Int = #line) {
 func Errolog<T>(_ message:T,file:String = #file,line:Int = #line) {
     
     let fileName =  (file as NSString).lastPathComponent
-    print("\(currentTime())\(fileName)Line:\(line) ->Erro \n\(message)")
+    print("\(currentTime())\(fileName)Line:\(line) ->Error \n\(message)")
 }
 
 func currentTime() -> String {

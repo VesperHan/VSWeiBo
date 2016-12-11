@@ -83,3 +83,25 @@ extension VSNetworkTools {
         }
     }
 }
+
+// MARK:- 请求首页数据
+extension VSNetworkTools {
+    
+    func loadStatus(finishd:@escaping(_ result:[[String:AnyObject]]?,_ error:Error?)->()) {
+        
+        let urlString = "https://api.weibo.com/2/statuses/home_timeline.json"
+        
+        let parameters = ["access_token":UserAccountViewModel.shareIntance.userAccount!.access_token]
+        
+        request(.Get, urlStr: urlString, parameters: parameters) { (result, error) in
+            
+            guard let resultDict = result as? [String :AnyObject]else{
+                
+                finishd(nil, error)
+                return
+            }
+            //若有值传给外部控制器
+            finishd(resultDict["statuses"] as?[[String:AnyObject]],error)
+        }
+    }
+}

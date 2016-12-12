@@ -25,6 +25,7 @@
 		F440107C1DFD225200028357 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440107B1DFD225200028357 /* User.swift */; };
 		F440107E1DFD27CF00028357 /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440107D1DFD27CF00028357 /* StatusViewModel.swift */; };
 		F44010801DFD336300028357 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440107F1DFD336300028357 /* HomeCell.swift */; };
+		F440108D1DFE4BD900028357 /* PicCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440108C1DFE4BD900028357 /* PicCollectionView.swift */; };
 		F47585C41DF15BAA008F084D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47585C31DF15BAA008F084D /* AppDelegate.swift */; };
 		F47585C91DF15BAA008F084D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47585C71DF15BAA008F084D /* Main.storyboard */; };
 		F47585CB1DF15BAA008F084D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F47585CA1DF15BAA008F084D /* Assets.xcassets */; };
@@ -69,6 +70,7 @@
 		F440107B1DFD225200028357 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F440107D1DFD27CF00028357 /* StatusViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
 		F440107F1DFD336300028357 /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		F440108C1DFE4BD900028357 /* PicCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicCollectionView.swift; sourceTree = "<group>"; };
 		F47585C01DF15BAA008F084D /* VSWeiboCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VSWeiboCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47585C31DF15BAA008F084D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F47585C81DF15BAA008F084D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				F475860B1DF53EDF008F084D /* Home.storyboard */,
 				F47585DD1DF162AD008F084D /* HomeViewController.swift */,
 				F440107F1DFD336300028357 /* HomeCell.swift */,
+				F440108C1DFE4BD900028357 /* PicCollectionView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				F44010631DF7B94500028357 /* PopoverAnimator.swift in Sources */,
 				F440107E1DFD27CF00028357 /* StatusViewModel.swift in Sources */,
 				F44010651DF7EEF800028357 /* VSNetworkTools.swift in Sources */,
+				F440108D1DFE4BD900028357 /* PicCollectionView.swift in Sources */,
 				F475862C1DF59FF8008F084D /* BaseViewController.swift in Sources */,
 				F475862E1DF5A17E008F084D /* VisitorView.swift in Sources */,
 				F475863D1DF5AAA2008F084D /* ProfileViewController.swift in Sources */,

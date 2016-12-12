@@ -94,7 +94,7 @@ extension VSNetworkTools {
         let parameters = ["access_token":UserAccountViewModel.shareIntance.userAccount!.access_token]
         
         request(.Get, urlStr: urlString, parameters: parameters) { (result, error) in
-            
+            Infolog(result)
             guard let resultDict = result as? [String :AnyObject]else{
                 
                 finishd(nil, error)

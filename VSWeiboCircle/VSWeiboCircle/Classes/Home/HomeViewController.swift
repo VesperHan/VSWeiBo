@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HomeViewController: BaseViewController {
 
@@ -86,8 +87,28 @@ extension HomeViewController {
                 self.viewModels.append(viewModel)
             }
             
-            self.tableView.reloadData()
+            self.cacheImages(viewModels: self.viewModels)
         }
+    }
+    
+    //图片缓存策略
+    //目的:解决图片比例未知问题,获取真实图片大小并显示
+    private func cacheImages(viewModels:[StatusViewModel]){
+    
+        //所有异步操作完成之后再刷新
+        //进入组之后进行异步操作,执行完成之后离开组,然后刷新表格
+        let group = DispatchGroup()
+        
+        for viewmodel in viewModels {
+            for picUrl in viewmodel.picURLs {
+                
+                group.enter()
+                SDWebImageManager.shared().downloadImage(with: picUrl, options: [], progress: nil, completed: { (_, _, _, _, _) in
+                    group.leave()
+                })
+            }
+        }
+        group.notify(queue: DispatchQueue.main) {  self.tableView.reloadData()  }
     }
 }
 

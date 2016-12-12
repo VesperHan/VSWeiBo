@@ -15,6 +15,8 @@ class Status: NSObject {
     var text : String?                      // 微博的正文
     var mid : Int = 0                       // 微博的ID
     var user : User?
+    var pic_urls:[[String:String]]?         //微博配图
+    
     
     init(dict:[String:AnyObject]) {
         

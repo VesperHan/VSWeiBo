@@ -32,13 +32,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 func Infolog<T>(_ message:T,file:String = #file,line:Int = #line) {
     
     let fileName =  (file as NSString).lastPathComponent
-    print("\(currentTime())\(fileName)Line:\(line) ->Info \n\(message)")
+    print("\(currentTime())\(fileName) Line:\(line) ->Info \n\(message)")
 }
 
 func Errolog<T>(_ message:T,file:String = #file,line:Int = #line) {
     
     let fileName =  (file as NSString).lastPathComponent
-    print("\(currentTime())\(fileName)Line:\(line) ->Error \n\(message)")
+    print("\(currentTime())\(fileName) Line:\(line) ->Error \n\(message)")
 }
 
 func currentTime() -> String {

@@ -28,10 +28,12 @@ class HomeViewController: BaseViewController {
         super.viewDidLoad()
 
         setupNav()
-        loadStatus()
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 200
+        
+        setupHeaderView()
+        setupFooterView()
     }
     
     func tmpCodeLayout(){
@@ -64,7 +66,16 @@ extension HomeViewController {
     
     fileprivate func setupHeaderView(){
         
-        let header = MJRefreshNormalHeader(re)
+        let header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(loadNewStatus))
+        
+        tableView.mj_header = header
+        
+        tableView.mj_header.beginRefreshing()
+    }
+    
+    fileprivate func setupFooterView(){
+    
+        tableView.mj_footer = MJRefreshAutoFooter(refreshingTarget: self, refreshingAction:#selector(loadMoreStatus))
     }
 }
 
@@ -82,14 +93,36 @@ extension HomeViewController {
         present(popOverView, animated: true, completion: nil)
 
     }
+    
+    @objc fileprivate func loadNewStatus(){
+    
+                loadStatus(true)
+    }
+    
+    @objc fileprivate func loadMoreStatus(){
+    
+                loadStatus(false)
+    }
 }
 
 // MARK:- 请求数据
 extension HomeViewController {
 
-    fileprivate func loadStatus(){
+    fileprivate func loadStatus(_ isNewData:Bool){
         SVProgressHUD.show()
-        VSNetworkTools.shareInstance.loadStatus { (result, error) in
+        var since_id = 0
+        var max_id = 0
+        
+        if isNewData {
+            
+            since_id = viewModels.first?.status?.mid ?? 0
+        }else{
+        
+            max_id = viewModels.last?.status?.mid ?? 0
+            max_id = max_id == 0 ? 0 : (max_id - 1)
+        }
+        
+        VSNetworkTools.shareInstance.loadStatus(since_id,max_id){(result, error) in
             
             if error != nil{
                 
@@ -99,14 +132,24 @@ extension HomeViewController {
             guard let resultArr = result else {
                 return
             }
+            
+            var tmpViewModel = [StatusViewModel]()
             for statusDict in resultArr {
             
                 let status = Status(dict: statusDict)
                 let viewModel = StatusViewModel(status: status)
-                self.viewModels.append(viewModel)
+                tmpViewModel.append(viewModel)
             }
             
-            self.cacheImages(viewModels: self.viewModels)
+            if isNewData {
+            
+                self.viewModels = tmpViewModel + self.viewModels
+            }else{
+                
+                self.viewModels += tmpViewModel
+            }
+            
+            self.cacheImages(viewModels: tmpViewModel)
         }
     }
     
@@ -127,11 +170,17 @@ extension HomeViewController {
                 })
             }
         }
-        group.notify(queue: DispatchQueue.main) {  self.tableView.reloadData()  }
-        SVProgressHUD.dismiss()
+        group.notify(queue: DispatchQueue.main) {
+            
+            self.tableView.reloadData()
+            self.tableView.mj_header.endRefreshing()
+            self.tableView.mj_footer.endRefreshing()
+            SVProgressHUD.dismiss()
+        }
     }
 }
 
+// MARK:- tableview delegate
 extension HomeViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

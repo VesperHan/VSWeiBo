@@ -45,9 +45,10 @@ class HomeCell: UITableViewCell {
             userName.text = viewModel.status?.user?.screen_name
             vipLevel.image = viewModel.vipImage
             timeLb.text = viewModel.createAtText
-            sourceLb.text = viewModel.sourceText
-            contentLb.text = viewModel.status?.text
             
+            sourceLb.text = "来自" + (viewModel.sourceText ?? "来自宇宙")
+            contentLb.text = viewModel.status?.text
+
             userName.textColor = viewModel.vipImage == nil ? UIColor.black : UIColor.orange
             
             //计算picview宽高

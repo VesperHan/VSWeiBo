@@ -87,11 +87,12 @@ extension VSNetworkTools {
 // MARK:- 请求首页数据
 extension VSNetworkTools {
     
-    func loadStatus(finishd:@escaping(_ result:[[String:AnyObject]]?,_ error:Error?)->()) {
+    func loadStatus(_ since_id:Int,_ max_id:Int,finishd:@escaping(_ result:[[String:AnyObject]]?,_ error:Error?)->()) {
         
         let urlString = "https://api.weibo.com/2/statuses/home_timeline.json"
         
-        let parameters = ["access_token":UserAccountViewModel.shareIntance.userAccount!.access_token]
+        let parameters = ["access_token":UserAccountViewModel.shareIntance.userAccount!.access_token,
+                          "since_id":"\(since_id)","max_id":"\(max_id)"]
         
         request(.Get, urlStr: urlString, parameters: parameters) { (result, error) in
             Infolog(result)

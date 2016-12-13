@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import SVProgressHUD
 
 class HomeViewController: BaseViewController {
 
@@ -69,7 +70,7 @@ extension HomeViewController {
 extension HomeViewController {
 
     fileprivate func loadStatus(){
-    
+        SVProgressHUD.show()
         VSNetworkTools.shareInstance.loadStatus { (result, error) in
             
             if error != nil{
@@ -109,6 +110,7 @@ extension HomeViewController {
             }
         }
         group.notify(queue: DispatchQueue.main) {  self.tableView.reloadData()  }
+        SVProgressHUD.dismiss()
     }
 }
 

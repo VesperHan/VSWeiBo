@@ -64,6 +64,7 @@ class HomeCell: UITableViewCell {
                     retweetText.text = "@"+"\(userName):"+retweetCont
                 }
                 retweetBgView.isHidden = false
+                retweetConsTop.constant = 10
             }else{
             
                 retweetText.text = nil

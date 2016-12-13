@@ -19,9 +19,15 @@ class HomeCell: UITableViewCell {
     @IBOutlet weak var sourceLb: UILabel!
     @IBOutlet weak var contentLb: UILabel!
     @IBOutlet weak var retweetText: UILabel!
+    
+    @IBOutlet weak var retweetBgView: UIView!
     //collectionView 尺寸计算
     @IBOutlet weak var consWidth: NSLayoutConstraint!
     @IBOutlet weak var consHeight: NSLayoutConstraint!
+    //collection距离底部约束
+    @IBOutlet weak var consBottom: NSLayoutConstraint!
+    //转发正文距离顶部的约束
+    @IBOutlet weak var retweetConsTop: NSLayoutConstraint!
     
     @IBOutlet weak var picView: PicCollectionView!
     
@@ -48,9 +54,7 @@ class HomeCell: UITableViewCell {
             let picViewSize = calculatePicViewSize(count: viewModel.picURLs.count)
             consWidth.constant = picViewSize.width
             consHeight.constant = picViewSize.height
-            
-            Infolog(NSStringFromCGSize(picViewSize))
-            Infolog(NSStringFromCGRect(picView.frame))
+
             //传递picURl给picView
             picView.picURLs = viewModel.picURLs
             
@@ -59,9 +63,12 @@ class HomeCell: UITableViewCell {
                     
                     retweetText.text = "@"+"\(userName):"+retweetCont
                 }
+                retweetBgView.isHidden = false
             }else{
             
                 retweetText.text = nil
+                retweetBgView.isHidden = true
+                retweetConsTop.constant = 0
             }
         }
     }
@@ -69,7 +76,7 @@ class HomeCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        iconView.layer.cornerRadius = 40
+        iconView.layer.cornerRadius = 20
         iconView.clipsToBounds = true
     }
 }
@@ -82,9 +89,10 @@ extension HomeCell {
         
         if count == 0 {
             
+            consBottom.constant = 0
             return CGSize.zero
         }
-        
+        consBottom.constant = 10
         let layout = picView.collectionViewLayout as! UICollectionViewFlowLayout
 
         //单张配图

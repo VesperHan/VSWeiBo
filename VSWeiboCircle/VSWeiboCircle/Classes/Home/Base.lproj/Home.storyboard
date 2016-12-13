@@ -66,7 +66,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LRb-XK-2Fi">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LRb-XK-2Fi" userLabel="底部工具栏">
                                             <rect key="frame" x="0.0" y="324" width="375" height="40"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1j-Lc-T4t">
@@ -143,6 +143,10 @@
                                                 <constraint firstItem="lO6-99-fTW" firstAttribute="centerY" secondItem="I1j-Lc-T4t" secondAttribute="centerY" id="wu8-re-sRq"/>
                                             </constraints>
                                         </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NHD-te-6N6" userLabel="转发背景">
+                                            <rect key="frame" x="8" y="95" width="359" height="219"/>
+                                            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eSg-6o-vMz" customClass="PicCollectionView" customModule="VSWeiboCircle" customModuleProvider="target">
                                             <rect key="frame" x="15" y="186" width="329" height="128"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -182,8 +186,8 @@
                                             </cells>
                                         </collectionView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="转发正文" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enx-JI-LO5" userLabel="retweeted">
-                                            <rect key="frame" x="15" y="105" width="337" height="71"/>
-                                            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            <rect key="frame" x="15" y="100" width="337" height="76"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -191,7 +195,8 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="9dU-I7-bvp" firstAttribute="top" secondItem="Ibm-D3-v6f" secondAttribute="bottom" constant="15" id="1MF-LQ-zuX"/>
-                                        <constraint firstItem="enx-JI-LO5" firstAttribute="top" secondItem="9dU-I7-bvp" secondAttribute="bottom" constant="15" id="1bP-Qg-mVy"/>
+                                        <constraint firstItem="enx-JI-LO5" firstAttribute="top" secondItem="9dU-I7-bvp" secondAttribute="bottom" constant="10" id="1bP-Qg-mVy"/>
+                                        <constraint firstItem="NHD-te-6N6" firstAttribute="leading" secondItem="1DY-w8-3v0" secondAttribute="leadingMargin" id="3Ce-SY-poH"/>
                                         <constraint firstItem="eSg-6o-vMz" firstAttribute="leading" secondItem="Ibm-D3-v6f" secondAttribute="leading" id="61F-Lc-Fft"/>
                                         <constraint firstAttribute="trailing" secondItem="LRb-XK-2Fi" secondAttribute="trailing" id="7O6-9w-apS"/>
                                         <constraint firstItem="9dU-I7-bvp" firstAttribute="leading" secondItem="Ibm-D3-v6f" secondAttribute="leading" id="Eey-mK-gZW"/>
@@ -202,14 +207,17 @@
                                         <constraint firstAttribute="bottom" secondItem="LRb-XK-2Fi" secondAttribute="bottom" id="Mb4-es-QcN"/>
                                         <constraint firstItem="Ibm-D3-v6f" firstAttribute="leading" secondItem="1DY-w8-3v0" secondAttribute="leadingMargin" constant="7" id="Wps-lZ-Cua"/>
                                         <constraint firstItem="XjG-h4-Xeg" firstAttribute="bottom" secondItem="Ibm-D3-v6f" secondAttribute="bottom" id="YNZ-xS-Tc5"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="NHD-te-6N6" secondAttribute="trailing" id="aHz-70-9ob"/>
                                         <constraint firstItem="ATA-HJ-sBu" firstAttribute="leading" secondItem="iex-hZ-HUz" secondAttribute="trailing" constant="8" id="aWd-Gd-8kz"/>
                                         <constraint firstItem="LRb-XK-2Fi" firstAttribute="top" secondItem="eSg-6o-vMz" secondAttribute="bottom" constant="10" id="bfN-3h-gdv"/>
                                         <constraint firstItem="ATA-HJ-sBu" firstAttribute="centerY" secondItem="iex-hZ-HUz" secondAttribute="centerY" id="c27-ZK-67j"/>
                                         <constraint firstItem="LRb-XK-2Fi" firstAttribute="leading" secondItem="1DY-w8-3v0" secondAttribute="leading" id="cnW-Ym-Tg7"/>
                                         <constraint firstItem="iex-hZ-HUz" firstAttribute="top" secondItem="Ibm-D3-v6f" secondAttribute="top" id="dgL-fg-JRF"/>
                                         <constraint firstItem="iKq-eS-IjY" firstAttribute="leading" secondItem="XjG-h4-Xeg" secondAttribute="trailing" constant="8" id="ear-hW-Pkh"/>
+                                        <constraint firstItem="NHD-te-6N6" firstAttribute="top" secondItem="9dU-I7-bvp" secondAttribute="bottom" constant="5" id="iKy-jV-XaC"/>
                                         <constraint firstItem="mz3-Jq-ZM8" firstAttribute="bottom" secondItem="iKq-eS-IjY" secondAttribute="bottom" id="lvs-8f-b68"/>
                                         <constraint firstItem="Ibm-D3-v6f" firstAttribute="top" secondItem="1DY-w8-3v0" secondAttribute="topMargin" constant="10" id="nxw-XO-Koz"/>
+                                        <constraint firstItem="LRb-XK-2Fi" firstAttribute="top" secondItem="NHD-te-6N6" secondAttribute="bottom" constant="10" id="oAY-GT-Oe2"/>
                                         <constraint firstItem="enx-JI-LO5" firstAttribute="trailing" secondItem="9dU-I7-bvp" secondAttribute="trailing" id="ovP-xg-dhg"/>
                                         <constraint firstItem="iex-hZ-HUz" firstAttribute="leading" secondItem="Ibm-D3-v6f" secondAttribute="trailing" constant="8" id="v4O-fD-xZ0"/>
                                         <constraint firstItem="iKq-eS-IjY" firstAttribute="bottom" secondItem="Ibm-D3-v6f" secondAttribute="bottom" id="x4y-Tf-nbn"/>
@@ -218,11 +226,14 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="consHeight" destination="npY-pp-JBX" id="Sxe-h3-Mle"/>
+                                    <outlet property="consBottom" destination="bfN-3h-gdv" id="INh-Ul-I87"/>
+                                    <outlet property="consHeight" destination="npY-pp-JBX" id="gsx-wj-7dp"/>
                                     <outlet property="consWidth" destination="CEo-gK-wnw" id="lp6-4v-1x4"/>
                                     <outlet property="contentLb" destination="9dU-I7-bvp" id="aJY-kn-Fr8"/>
                                     <outlet property="iconView" destination="Ibm-D3-v6f" id="dwq-3H-Lau"/>
                                     <outlet property="picView" destination="eSg-6o-vMz" id="tYg-vE-QDN"/>
+                                    <outlet property="retweetBgView" destination="NHD-te-6N6" id="RDA-rV-K8K"/>
+                                    <outlet property="retweetConsTop" destination="1bP-Qg-mVy" id="o6G-6o-cTe"/>
                                     <outlet property="retweetText" destination="enx-JI-LO5" id="Qzs-9N-W94"/>
                                     <outlet property="sourceLb" destination="mz3-Jq-ZM8" id="bUs-FJ-ufS"/>
                                     <outlet property="timeLb" destination="iKq-eS-IjY" id="ap6-12-vDm"/>

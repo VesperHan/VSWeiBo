@@ -70,7 +70,7 @@ class StatusViewModel: NSObject {
         
         //配图数据处理
         
-        if let picURLDics = status.pic_urls{
+        if let picURLDics = status.pic_urls?.count != 0 ? status.pic_urls : status.retweeted_status?.pic_urls{
         
             for picURLDict in picURLDics {
                 

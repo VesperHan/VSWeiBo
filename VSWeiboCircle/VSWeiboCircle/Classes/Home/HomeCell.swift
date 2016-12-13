@@ -18,6 +18,7 @@ class HomeCell: UITableViewCell {
     @IBOutlet weak var timeLb: UILabel!
     @IBOutlet weak var sourceLb: UILabel!
     @IBOutlet weak var contentLb: UILabel!
+    @IBOutlet weak var retweetText: UILabel!
     //collectionView 尺寸计算
     @IBOutlet weak var consWidth: NSLayoutConstraint!
     @IBOutlet weak var consHeight: NSLayoutConstraint!
@@ -48,16 +49,27 @@ class HomeCell: UITableViewCell {
             consWidth.constant = picViewSize.width
             consHeight.constant = picViewSize.height
             
+            Infolog(NSStringFromCGSize(picViewSize))
+            Infolog(NSStringFromCGRect(picView.frame))
             //传递picURl给picView
             picView.picURLs = viewModel.picURLs
-            picView.backgroundColor = UIColor.yellow
+            
+            if viewModel.status?.retweeted_status != nil {
+                if let userName = viewModel.status?.retweeted_status?.user?.screen_name,let retweetCont = viewModel.status?.retweeted_status?.text {
+                    
+                    retweetText.text = "@"+"\(userName):"+retweetCont
+                }
+            }else{
+            
+                retweetText.text = nil
+            }
         }
     }
     //从Xib加载的内容会在这里加载
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        iconView.layer.cornerRadius = 20
+        iconView.layer.cornerRadius = 40
         iconView.clipsToBounds = true
     }
 }
@@ -99,10 +111,10 @@ extension HomeCell {
         }
         
         //其他张配图
-        let  rows = CGFloat((count-1)/3+1)
+        let  rows = CGFloat((count - 1) / 3 + 1)
         //picView高度计算
+        let picViewW = UIScreen.main.bounds.width - 2 * edgeMargin
         let picViewH = rows*imageViewWH+(rows-1)*itemMargin
-        let picViewW = UIScreen.main.bounds.width - edgeMargin
         
         return CGSize(width: picViewW, height: picViewH)
     }

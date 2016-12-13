@@ -9,6 +9,8 @@
 import UIKit
 import SDWebImage
 import SVProgressHUD
+import SnapKit
+import MJRefresh
 
 class HomeViewController: BaseViewController {
 
@@ -31,6 +33,17 @@ class HomeViewController: BaseViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 200
     }
+    
+    func tmpCodeLayout(){
+        
+        refreshControl = UIRefreshControl()
+        let demoView = UIView()
+        refreshControl?.addSubview(demoView)
+        demoView.snp.makeConstraints { (ConstraintMaker) in
+            
+            ConstraintMaker.centerX.equalTo(self.view)
+        }
+    }
 }
 
 // MARK:- 设置UI
@@ -47,6 +60,11 @@ extension HomeViewController {
         navigationItem.titleView = titleBtn
         
         titleBtn.addTarget(self, action: #selector(titleBtnClick(sender:)), for: .touchUpInside)
+    }
+    
+    fileprivate func setupHeaderView(){
+        
+        let header = MJRefreshNormalHeader(re)
     }
 }
 

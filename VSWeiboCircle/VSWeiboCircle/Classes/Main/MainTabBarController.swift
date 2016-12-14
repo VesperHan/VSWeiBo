@@ -73,6 +73,6 @@ extension MainTabBarController {
 
     @objc fileprivate func composeClick(sender:UIButton){
         
-        self.selectedIndex = 2
+
     }
 }

@@ -15,6 +15,7 @@ import MJRefresh
 class HomeViewController: BaseViewController {
 
     fileprivate lazy var titleBtn:TitleButton = TitleButton()
+    fileprivate lazy var tipLabel = UILabel()
     //Array
     fileprivate lazy var viewModels : [StatusViewModel] = [StatusViewModel]()
     //设置弹出动画样式 弹出时间 风格...
@@ -34,6 +35,7 @@ class HomeViewController: BaseViewController {
         
         setupHeaderView()
         setupFooterView()
+        setupTipLabel()
     }
     
     func tmpCodeLayout(){
@@ -76,6 +78,15 @@ extension HomeViewController {
     fileprivate func setupFooterView(){
     
         tableView.mj_footer = MJRefreshAutoFooter(refreshingTarget: self, refreshingAction:#selector(loadMoreStatus))
+    }
+    
+    fileprivate func setupTipLabel(){
+    
+        navigationController?.navigationBar.insertSubview(tipLabel, at:0)
+        tipLabel.frame = CGRect(x: 0, y: 10, width: 375, height: 34)
+        tipLabel.backgroundColor = UIColor.orange
+        tipLabel.isHidden = true
+        tipLabel.textAlignment = .center
     }
 }
 
@@ -176,6 +187,28 @@ extension HomeViewController {
             self.tableView.mj_header.endRefreshing()
             self.tableView.mj_footer.endRefreshing()
             SVProgressHUD.dismiss()
+            
+            self.showTipLabel(count: viewModels.count)
+        }
+    }
+    
+    private func showTipLabel(count:Int){
+    
+        tipLabel.isHidden = false
+        tipLabel.text = count == 0 ? "没有新数据" :"\(count)条新微博"
+        
+        UIView.animate(withDuration: 1.0, animations: {
+            
+            self.tipLabel.frame.origin.y = 44
+        }) { (_) in
+            
+            UIView.animate(withDuration: 1.0, delay: 1.0, options: [], animations: {
+                
+                self.tipLabel.frame.origin.y = 10
+            }, completion: { (_) in
+                
+                self.tipLabel.isHidden = true
+            })
         }
     }
 }

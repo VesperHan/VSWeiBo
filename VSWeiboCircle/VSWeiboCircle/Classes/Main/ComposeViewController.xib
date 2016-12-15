@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ComposeViewController" customModule="VSWeiboCircle" customModuleProvider="target">
             <connections>
                 <outlet property="collectHCons" destination="VCF-AL-hXo" id="7Am-8p-0HH"/>
+                <outlet property="picPickerView" destination="fZp-Dl-KJJ" id="rE9-ZT-wgM"/>
                 <outlet property="textView" destination="W2h-7g-FMl" id="vzH-YY-qzh"/>
                 <outlet property="toolBarBottomCons" destination="w0b-e5-F3r" id="Rij-c9-BDd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -87,7 +88,7 @@
                 </toolbar>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fZp-Dl-KJJ" customClass="PicPickerCollectionView" customModule="VSWeiboCircle" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="623" width="375" height="0.0"/>
-                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" id="VCF-AL-hXo"/>
                     </constraints>

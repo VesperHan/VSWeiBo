@@ -26,6 +26,13 @@
 		F440107E1DFD27CF00028357 /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440107D1DFD27CF00028357 /* StatusViewModel.swift */; };
 		F44010801DFD336300028357 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440107F1DFD336300028357 /* HomeCell.swift */; };
 		F440108D1DFE4BD900028357 /* PicCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440108C1DFE4BD900028357 /* PicCollectionView.swift */; };
+		F44010971E00E1F300028357 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44010951E00E1F300028357 /* ComposeViewController.swift */; };
+		F44010981E00E1F300028357 /* ComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F44010961E00E1F300028357 /* ComposeViewController.xib */; };
+		F440109A1E00E94100028357 /* ComposeTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44010991E00E94100028357 /* ComposeTitleView.swift */; };
+		F440109C1E00EDA000028357 /* ComposeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440109B1E00EDA000028357 /* ComposeTextView.swift */; };
+		F440109F1E012F1E00028357 /* PicPickerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440109E1E012F1E00028357 /* PicPickerCollectionView.swift */; };
+		F44010A31E0150A000028357 /* PickerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44010A11E0150A000028357 /* PickerViewCell.swift */; };
+		F44010A41E0150A000028357 /* PickerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F44010A21E0150A000028357 /* PickerViewCell.xib */; };
 		F47585C41DF15BAA008F084D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47585C31DF15BAA008F084D /* AppDelegate.swift */; };
 		F47585C91DF15BAA008F084D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47585C71DF15BAA008F084D /* Main.storyboard */; };
 		F47585CB1DF15BAA008F084D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F47585CA1DF15BAA008F084D /* Assets.xcassets */; };
@@ -71,6 +78,13 @@
 		F440107D1DFD27CF00028357 /* StatusViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
 		F440107F1DFD336300028357 /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		F440108C1DFE4BD900028357 /* PicCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicCollectionView.swift; sourceTree = "<group>"; };
+		F44010951E00E1F300028357 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		F44010961E00E1F300028357 /* ComposeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeViewController.xib; sourceTree = "<group>"; };
+		F44010991E00E94100028357 /* ComposeTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeTitleView.swift; sourceTree = "<group>"; };
+		F440109B1E00EDA000028357 /* ComposeTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeTextView.swift; sourceTree = "<group>"; };
+		F440109E1E012F1E00028357 /* PicPickerCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicPickerCollectionView.swift; sourceTree = "<group>"; };
+		F44010A11E0150A000028357 /* PickerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewCell.swift; sourceTree = "<group>"; };
+		F44010A21E0150A000028357 /* PickerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickerViewCell.xib; sourceTree = "<group>"; };
 		F47585C01DF15BAA008F084D /* VSWeiboCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VSWeiboCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47585C31DF15BAA008F084D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F47585C81DF15BAA008F084D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -174,6 +188,16 @@
 			path = HomeModel;
 			sourceTree = "<group>";
 		};
+		F440109D1E012EF600028357 /* picturePick */ = {
+			isa = PBXGroup;
+			children = (
+				F440109E1E012F1E00028357 /* PicPickerCollectionView.swift */,
+				F44010A11E0150A000028357 /* PickerViewCell.swift */,
+				F44010A21E0150A000028357 /* PickerViewCell.xib */,
+			);
+			path = picturePick;
+			sourceTree = "<group>";
+		};
 		F47585B71DF15BAA008F084D = {
 			isa = PBXGroup;
 			children = (
@@ -247,8 +271,13 @@
 				F440105B1DF6B53E00028357 /* Popover */,
 				F475862A1DF59FBC008F084D /* Visitor */,
 				F475860E1DF53EE5008F084D /* Addition.storyboard */,
+				F440109D1E012EF600028357 /* picturePick */,
 				F47585E51DF2A189008F084D /* MainVCSettings.json */,
 				F47585DB1DF161BB008F084D /* MainTabBarController.swift */,
+				F44010951E00E1F300028357 /* ComposeViewController.swift */,
+				F44010991E00E94100028357 /* ComposeTitleView.swift */,
+				F440109B1E00EDA000028357 /* ComposeTextView.swift */,
+				F44010961E00E1F300028357 /* ComposeViewController.xib */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -368,7 +397,9 @@
 				F475860C1DF53EE5008F084D /* Addition.storyboard in Resources */,
 				F440105F1DF6B57500028357 /* PopoverViewController.xib in Resources */,
 				F47585FD1DF53BC4008F084D /* Message.storyboard in Resources */,
+				F44010A41E0150A000028357 /* PickerViewCell.xib in Resources */,
 				F47586121DF53F46008F084D /* Discover.storyboard in Resources */,
+				F44010981E00E1F300028357 /* ComposeViewController.xib in Resources */,
 				F47585C91DF15BAA008F084D /* Main.storyboard in Resources */,
 				F47586091DF53EDF008F084D /* Home.storyboard in Resources */,
 			);
@@ -432,20 +463,25 @@
 				F440106C1DF9431A00028357 /* Common.swift in Sources */,
 				F44010741DFAA7A400028357 /* WelcomeViewController.swift in Sources */,
 				F44010781DFBEA7100028357 /* Status.swift in Sources */,
+				F440109F1E012F1E00028357 /* PicPickerCollectionView.swift in Sources */,
 				F47585DC1DF161BB008F084D /* MainTabBarController.swift in Sources */,
+				F440109A1E00E94100028357 /* ComposeTitleView.swift in Sources */,
 				F440106E1DF94CE100028357 /* UserAccount.swift in Sources */,
 				F47585C41DF15BAA008F084D /* AppDelegate.swift in Sources */,
 				F475863F1DF65E97008F084D /* UIBarButtonItem+Extension.swift in Sources */,
 				F44010701DFA5A0D00028357 /* UserAccountViewModel.swift in Sources */,
 				F47585E01DF162C2008F084D /* MessageViewController.swift in Sources */,
+				F44010971E00E1F300028357 /* ComposeViewController.swift in Sources */,
 				F44010691DF816E900028357 /* OAuthViewController.swift in Sources */,
 				F440105E1DF6B57500028357 /* PopoverViewController.swift in Sources */,
 				F47586411DF66AD1008F084D /* TitleButton.swift in Sources */,
 				F440107A1DFCF67000028357 /* NSData+Extension.swift in Sources */,
 				F44010611DF79C9500028357 /* VSPresentController.swift in Sources */,
+				F440109C1E00EDA000028357 /* ComposeTextView.swift in Sources */,
 				F44010801DFD336300028357 /* HomeCell.swift in Sources */,
 				F47585DE1DF162AD008F084D /* HomeViewController.swift in Sources */,
 				F44010631DF7B94500028357 /* PopoverAnimator.swift in Sources */,
+				F44010A31E0150A000028357 /* PickerViewCell.swift in Sources */,
 				F440107E1DFD27CF00028357 /* StatusViewModel.swift in Sources */,
 				F44010651DF7EEF800028357 /* VSNetworkTools.swift in Sources */,
 				F440108D1DFE4BD900028357 /* PicCollectionView.swift in Sources */,

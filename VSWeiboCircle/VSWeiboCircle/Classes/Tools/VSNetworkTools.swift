@@ -23,6 +23,7 @@ class VSNetworkTools: AFHTTPSessionManager {
         let tools = VSNetworkTools()
         tools.responseSerializer.acceptableContentTypes?.insert("text/html")
         tools.responseSerializer.acceptableContentTypes?.insert("text/plain")
+        tools.requestSerializer.timeoutInterval = 5
         return tools
     }()
 }

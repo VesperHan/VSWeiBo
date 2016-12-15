@@ -73,6 +73,10 @@ extension MainTabBarController {
 
     @objc fileprivate func composeClick(sender:UIButton){
         
-
+        let composeVC = ComposeViewController()
+        
+        let composeNav = UINavigationController(rootViewController: composeVC)
+        
+        present(composeNav, animated: true, completion: nil)
     }
 }

@@ -138,6 +138,9 @@ extension HomeViewController {
             if error != nil{
                 
                 Errolog(error)
+                self.tableView.mj_header.endRefreshing()
+                self.tableView.mj_footer.endRefreshing()
+                SVProgressHUD.dismiss()
                 return
             }
             guard let resultArr = result else {

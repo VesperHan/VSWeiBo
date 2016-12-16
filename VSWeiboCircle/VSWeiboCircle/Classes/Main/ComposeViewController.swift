@@ -12,6 +12,7 @@ class ComposeViewController: UIViewController {
 
     fileprivate lazy var titleView : ComposeTitleView = ComposeTitleView()
     fileprivate lazy var picImages :[UIImage] = [UIImage]()
+    fileprivate lazy var emoticonVC : EmoticonController = EmoticonController()
     
     @IBOutlet weak var textView: ComposeTextView!
     @IBOutlet weak var toolBarBottomCons: NSLayoutConstraint!
@@ -24,11 +25,6 @@ class ComposeViewController: UIViewController {
         setupNavigationBar()
         setupNotifications()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame(note:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        textView.becomeFirstResponder()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -130,13 +126,33 @@ extension ComposeViewController {
         }
     }
     
-    @IBAction func picPickerBtnClk(_ sender: Any) {
-        
+    @IBAction func picPickerBtnClk(_ sender: UIButton) {
+
+        if sender.isSelected == true {
+            
+            sender.isSelected = false
+            picImages.removeAll()
+            picPickerView.images = picImages
+            collectHCons.constant = 0
+            UIView.animate(withDuration: 0.5) {
+                self.view.layoutIfNeeded()
+            }
+            return
+        }
+        sender.isSelected = true
         textView.resignFirstResponder()
         collectHCons.constant = UIScreen.main.bounds.height * 0.6
         UIView.animate(withDuration: 0.5) {
             self.view.layoutIfNeeded()
         }
+    }
+    
+    @IBAction func emoticonBtnClk(_ sender: Any) {
+        
+        textView.resignFirstResponder()
+        //切换键盘
+        textView.inputView = textView.inputView != nil ? nil : emoticonVC.view
+        textView.becomeFirstResponder()
     }
 }
 

@@ -20,6 +20,10 @@ class EmioticonViewCell: UICollectionViewCell {
             }
             emoticonBtn.setImage(UIImage.init(contentsOfFile: emoticon.pngPath ?? ""), for: .normal)
             emoticonBtn.setTitle(emoticon.emojiCode, for: .normal)
+            
+            if emoticon.isRemove {
+                emoticonBtn.setImage(#imageLiteral(resourceName: "compose_emotion_delete"), for: .normal)
+            }
         }
     }
     override init(frame: CGRect) {

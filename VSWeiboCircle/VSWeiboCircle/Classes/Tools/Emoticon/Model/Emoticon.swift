@@ -39,10 +39,22 @@ class Emoticon: NSObject {
             pngPath = Bundle.main.bundlePath + "/Emoticons.bundle/" + png
         }
     }
+    //表情对应的文字
     var chs :String?
- 
     var pngPath:String?
     var emojiCode:String?
+    var isRemove: Bool = false
+    var isEmpty :Bool = false
+    
+    init(isRemove:Bool) {
+        
+        self.isRemove = isRemove
+    }
+    
+    init(isEmpty:Bool) {
+        
+        self.isEmpty = isEmpty
+    }
     
     init(dict:[String:String]) {
     

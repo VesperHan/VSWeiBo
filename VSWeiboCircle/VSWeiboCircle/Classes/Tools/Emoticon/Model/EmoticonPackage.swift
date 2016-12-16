@@ -16,7 +16,7 @@ class EmoticonPackage: NSObject {
         super.init()
         
         if id == ""{
-
+            addEmptyEmoticon(true)
             return
         }
         
@@ -32,6 +32,31 @@ class EmoticonPackage: NSObject {
             }
             emoticons.append(Emoticon(dict:dict))
             index += 1
+            
+            //每20个表情需要添加删除按钮
+            if index == 20 {
+            
+                emoticons.append(Emoticon(isRemove: true))
+                index = 0
+            }
         }
+        
+        addEmptyEmoticon(false)
+    }
+    
+    private func addEmptyEmoticon(_ isRecently:Bool){
+    
+        let count = emoticons.count % 21
+        
+        if count == 0 && !isRecently {
+            return
+        }
+        
+        //添加空白表情
+        for _ in count..<20 {
+            emoticons.append(Emoticon(isEmpty:true))
+        }
+        //最后一个添加删除
+        emoticons.append(Emoticon(isRemove:true))
     }
 }

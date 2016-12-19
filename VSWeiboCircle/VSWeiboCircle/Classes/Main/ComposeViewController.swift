@@ -120,13 +120,16 @@ extension ComposeViewController {
         // 1.获取发送微博的微博正文
         let statusText = textView.getEmoticonString()
         
+        SVProgressHUD.show()
         let finishedCalback = {(isSuccess:Bool)->() in
             
             if !isSuccess{
             
+                SVProgressHUD.dismiss()
                 SVProgressHUD.showError(withStatus: "send failed")
                 return
             }
+            SVProgressHUD.dismiss()
             SVProgressHUD.showSuccess(withStatus: "send success")
             self.dismiss(animated: true, completion: nil)
         }

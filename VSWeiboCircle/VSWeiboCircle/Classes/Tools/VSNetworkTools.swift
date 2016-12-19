@@ -52,6 +52,16 @@ extension VSNetworkTools {
                 finished(nil,error)
             })
         }
+        return
+        //以下方式同样可以, 但是要和b包回调格式和内容保持一致
+        let successCallBack = { (task : URLSessionDataTask, result : Any?) -> Void in
+            finished(result, nil)
+        }
+        
+        let failureCallBack = { (task : URLSessionDataTask?, error : Error) -> Void in
+            finished(nil, error)
+        }
+        get(urlStr, parameters: parameters, progress: nil, success: successCallBack, failure: failureCallBack)
     }
 }
 

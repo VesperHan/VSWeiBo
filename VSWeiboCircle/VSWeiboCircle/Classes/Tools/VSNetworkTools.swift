@@ -31,7 +31,7 @@ class VSNetworkTools: AFHTTPSessionManager {
 extension VSNetworkTools {
     
     func request(_ methodType:RequestType,urlStr:String,parameters:[String:Any],finished: @escaping (_ result:Any?,_ error:Error?) -> ()){
-    
+        
         if methodType == RequestType.Get {
             
             get(urlStr, parameters: parameters, progress: nil, success: { (URLSessionDataTask, result) in
@@ -96,7 +96,7 @@ extension VSNetworkTools {
                           "since_id":"\(since_id)","max_id":"\(max_id)"]
         
         request(.Get, urlStr: urlString, parameters: parameters) { (result, error) in
-            Infolog(result)
+       
             guard let resultDict = result as? [String :AnyObject]else{
                 
                 finishd(nil, error)
@@ -104,6 +104,54 @@ extension VSNetworkTools {
             }
             //若有值传给外部控制器
             finishd(resultDict["statuses"] as?[[String:AnyObject]],error)
+        }
+    }
+}
+
+// MARK:- 发微博带照片
+extension VSNetworkTools {
+
+    func sendStatus(statusText:String,image:UIImage,isSuccess:@escaping (_ isSuccess:Bool)->()) {
+        
+        let urlString = "https://api.weibo.com/2/statuses/upload.json"
+        
+        let parameters = ["access_token":(UserAccountViewModel.shareIntance.userAccount?.access_token),
+                          "status":statusText]
+        
+        post(urlString, parameters: parameters, constructingBodyWith: { (formData) in
+            
+            if let imageData = UIImageJPEGRepresentation(image, 0.5){
+            
+                    formData.appendPart(withFileData: imageData, name: "pic", fileName: "123.png", mimeType: "image/png")
+            }
+        }, progress: nil, success: { (_, _) in
+            
+            isSuccess(true)
+        }, failure: { (_, error) in
+            
+            Errolog(error)
+        })
+    }
+}
+
+// MARK:- 发微博不带照片
+extension VSNetworkTools {
+
+    func sendStatus(statusText:String,isSuccess:@escaping(_ isSuccess:Bool)->()){
+    
+        let urlString = "https://api.weibo.com/2/statuses/update.json"
+        let parameters = ["access_token":(UserAccountViewModel.shareIntance.userAccount?.access_token),
+                          "status":statusText]
+        
+        request(.Post, urlStr: urlString, parameters: parameters){ (result,error) in
+        
+            if result != nil {
+            
+                isSuccess(true)
+            }else{
+                
+                isSuccess(false)
+            }
         }
     }
 }

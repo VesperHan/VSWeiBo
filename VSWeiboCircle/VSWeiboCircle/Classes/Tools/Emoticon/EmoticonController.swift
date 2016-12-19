@@ -16,6 +16,22 @@ class EmoticonController: UIViewController {
     
     fileprivate lazy var manager = EmoticonManager()
     
+    var emoticonCallBack:(_ emoticon:Emoticon)->()
+    
+    // 自定义构造函数
+    init(emoticonCallBack:@escaping(_ emoticon:Emoticon)->()) {
+        
+        //初始化之前就传递b包
+        self.emoticonCallBack = emoticonCallBack
+        
+        //构造函数必须实现super
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -110,6 +126,9 @@ extension EmoticonController:UICollectionViewDataSource,UICollectionViewDelegate
         let emoticon = package.emoticons[indexPath.item]
         
         insertRecentlyEmoticon(emoticon: emoticon)
+        
+        //点击表情回调
+        emoticonCallBack(emoticon)
     }
     
     private func insertRecentlyEmoticon(emoticon:Emoticon){
@@ -132,6 +151,11 @@ extension EmoticonController:UICollectionViewDataSource,UICollectionViewDelegate
         
         //插入表情
         manager.packages.first?.emoticons.insert(emoticon, at: 0)
+        
+        collectionView.reloadData()
+        
+        //问题:点击最近里面的表情若不是最新的就会刷新,导致最近里的表情会变位置
+        //解决思路:预存数组,当点击最近的时候,把预存数组里面的表情顺序 重写添加至最近的表情模块中
     }
 }
 

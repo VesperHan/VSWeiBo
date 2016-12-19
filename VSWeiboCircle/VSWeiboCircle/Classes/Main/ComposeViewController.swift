@@ -7,17 +7,24 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class ComposeViewController: UIViewController {
 
     fileprivate lazy var titleView : ComposeTitleView = ComposeTitleView()
     fileprivate lazy var picImages :[UIImage] = [UIImage]()
-    fileprivate lazy var emoticonVC : EmoticonController = EmoticonController()
+    fileprivate lazy var emoticonVC : EmoticonController = EmoticonController { [weak self](emoticon) in
+        
+        self?.textView.insertEmoticonIntoTextView(emoticon: emoticon)
+        self?.textViewDidChange(self!.textView)
+    }
     
     @IBOutlet weak var textView: ComposeTextView!
     @IBOutlet weak var toolBarBottomCons: NSLayoutConstraint!
     @IBOutlet weak var collectHCons: NSLayoutConstraint!
     @IBOutlet weak var picPickerView: PicPickerCollectionView!
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,6 +114,30 @@ extension ComposeViewController {
     
     @objc fileprivate func sendItemClk(){
     
+        // 0.键盘退出
+        textView.resignFirstResponder()
+        
+        // 1.获取发送微博的微博正文
+        let statusText = textView.getEmoticonString()
+        
+        let finishedCalback = {(isSuccess:Bool)->() in
+            
+            if !isSuccess{
+            
+                SVProgressHUD.showError(withStatus: "send failed")
+                return
+            }
+            SVProgressHUD.showSuccess(withStatus: "send success")
+            self.dismiss(animated: true, completion: nil)
+        }
+
+        if let image = picImages.first{
+        
+            VSNetworkTools.shareInstance.sendStatus(statusText: statusText, image: image, isSuccess: finishedCalback)
+        }else{
+        
+            VSNetworkTools.shareInstance.sendStatus(statusText: statusText, isSuccess: finishedCalback)
+        }
     }
     
     @objc fileprivate func keyboardWillChangeFrame(note:Notification){

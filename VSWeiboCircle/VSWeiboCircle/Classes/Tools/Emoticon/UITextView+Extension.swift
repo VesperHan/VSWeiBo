@@ -59,8 +59,9 @@ extension UITextView{
         
         //图文混排
         //png图片加入并转换为属性字符串
-        let attachment = NSTextAttachment()
+        let attachment = EmoticonAttachment()
         attachment.image = UIImage(contentsOfFile: emoticon.pngPath!)
+        attachment.chs = emoticon.chs
         let font = self.font!
         attachment.bounds = CGRect(x: 0, y: -4, width: font.lineHeight, height: font.lineHeight)
         let attrImageStr = NSAttributedString(attachment: attachment)

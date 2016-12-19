@@ -114,6 +114,7 @@ extension VSNetworkTools {
             }
             //若有值传给外部控制器
             finishd(resultDict["statuses"] as?[[String:AnyObject]],error)
+            Infolog(resultDict)
         }
     }
 }
@@ -152,7 +153,7 @@ extension VSNetworkTools {
         let urlString = "https://api.weibo.com/2/statuses/update.json"
         let parameters = ["access_token":(UserAccountViewModel.shareIntance.userAccount?.access_token),
                           "status":statusText]
-        
+        Infolog(parameters)
         request(.Post, urlStr: urlString, parameters: parameters){ (result,error) in
         
             if result != nil {

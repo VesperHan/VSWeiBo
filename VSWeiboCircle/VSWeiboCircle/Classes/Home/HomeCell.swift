@@ -47,7 +47,7 @@ class HomeCell: UITableViewCell {
             timeLb.text = viewModel.createAtText
             
             sourceLb.text = "来自" + (viewModel.sourceText ?? "来自宇宙")
-            contentLb.text = viewModel.status?.text
+            contentLb.attributedText = FindEmoticon.shareIntance.findAttiString(statusText: viewModel.status?.text, font: contentLb.font)
 
             userName.textColor = viewModel.vipImage == nil ? UIColor.black : UIColor.orange
             
@@ -62,7 +62,8 @@ class HomeCell: UITableViewCell {
             if viewModel.status?.retweeted_status != nil {
                 if let userName = viewModel.status?.retweeted_status?.user?.screen_name,let retweetCont = viewModel.status?.retweeted_status?.text {
                     
-                    retweetText.text = "@"+"\(userName):"+retweetCont
+                    let retweet = "@"+"\(userName):"+retweetCont
+                    retweetText.attributedText = FindEmoticon.shareIntance.findAttiString(statusText: retweet, font: retweetText.font)
                 }
                 retweetBgView.isHidden = false
                 retweetConsTop.constant = 10

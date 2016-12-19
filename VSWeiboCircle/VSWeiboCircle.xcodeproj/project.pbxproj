@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5E89A73D023ADB363D19968D /* Pods_VSWeiboCircle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC88687CC8CF01E0BEBBCD52 /* Pods_VSWeiboCircle.framework */; };
+		F43A1E271E07ACAD005035F7 /* FindEmoticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43A1E261E07ACAD005035F7 /* FindEmoticon.swift */; };
 		F440105E1DF6B57500028357 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440105C1DF6B57500028357 /* PopoverViewController.swift */; };
 		F440105F1DF6B57500028357 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F440105D1DF6B57500028357 /* PopoverViewController.xib */; };
 		F44010611DF79C9500028357 /* VSPresentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44010601DF79C9500028357 /* VSPresentController.swift */; };
@@ -67,6 +68,7 @@
 		122ACD8C13871E33D29324F1 /* Pods-VSWeiboCircle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VSWeiboCircle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VSWeiboCircle/Pods-VSWeiboCircle.debug.xcconfig"; sourceTree = "<group>"; };
 		DC88687CC8CF01E0BEBBCD52 /* Pods_VSWeiboCircle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VSWeiboCircle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4CDE2B1A9274B4FC786D1CB /* Pods-VSWeiboCircle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VSWeiboCircle.release.xcconfig"; path = "Pods/Target Support Files/Pods-VSWeiboCircle/Pods-VSWeiboCircle.release.xcconfig"; sourceTree = "<group>"; };
+		F43A1E261E07ACAD005035F7 /* FindEmoticon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindEmoticon.swift; sourceTree = "<group>"; };
 		F440105C1DF6B57500028357 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		F440105D1DF6B57500028357 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
 		F44010601DF79C9500028357 /* VSPresentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSPresentController.swift; sourceTree = "<group>"; };
@@ -356,6 +358,7 @@
 				F4D2C5E11E028D4200412A95 /* EmoticonController.swift */,
 				F452B9861E03980F004E3C7E /* EmioticonViewCell.swift */,
 				F452B9881E0668F3004E3C7E /* UITextView+Extension.swift */,
+				F43A1E261E07ACAD005035F7 /* FindEmoticon.swift */,
 			);
 			path = Emoticon;
 			sourceTree = "<group>";
@@ -518,6 +521,7 @@
 				F47586411DF66AD1008F084D /* TitleButton.swift in Sources */,
 				F440107A1DFCF67000028357 /* NSData+Extension.swift in Sources */,
 				F44010611DF79C9500028357 /* VSPresentController.swift in Sources */,
+				F43A1E271E07ACAD005035F7 /* FindEmoticon.swift in Sources */,
 				F440109C1E00EDA000028357 /* ComposeTextView.swift in Sources */,
 				F44010801DFD336300028357 /* HomeCell.swift in Sources */,
 				F47585DE1DF162AD008F084D /* HomeViewController.swift in Sources */,

@@ -10,5 +10,5 @@ pod 'SDWebImage'
 pod 'SnapKit'
 pod 'SVProgressHUD'
 pod 'MJRefresh'
-
+pod 'HYLabel'
 end

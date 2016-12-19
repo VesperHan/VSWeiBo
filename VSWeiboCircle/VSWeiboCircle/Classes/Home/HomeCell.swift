@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import HYLabel
 
 class HomeCell: UITableViewCell {
 
@@ -17,8 +18,8 @@ class HomeCell: UITableViewCell {
     @IBOutlet weak var vipLevel: UIImageView!
     @IBOutlet weak var timeLb: UILabel!
     @IBOutlet weak var sourceLb: UILabel!
-    @IBOutlet weak var contentLb: UILabel!
-    @IBOutlet weak var retweetText: UILabel!
+    @IBOutlet weak var contentLb: HYLabel!
+    @IBOutlet weak var retweetText: HYLabel!
     
     @IBOutlet weak var retweetBgView: UIView!
     //collectionView 尺寸计算
@@ -81,6 +82,13 @@ class HomeCell: UITableViewCell {
         
         iconView.layer.cornerRadius = 20
         iconView.clipsToBounds = true
+        
+        //监听@谁
+        contentLb.userTapHandler = {(labe,user,range) in}
+        //监听链接的点击
+        contentLb.linkTapHandler = {(label,link,range) in }
+        //监听话题点击
+        contentLb.topicTapHandler = {(label,topic,range) in }
     }
 }
 

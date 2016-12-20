@@ -50,6 +50,11 @@ class PhotoBrowserController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func loadView() {
+        
+        super.loadView()
+        view.frame.size.width += 20
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         

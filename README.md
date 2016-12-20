@@ -2,8 +2,8 @@
 A Swift WeiBo Demo 
 
 ### 说明
-使用语言:Swift 3.0 iOS 9.0
-目的:熟悉Swift 3.0的语法变化
+        使用语言:Swift 3.0 iOS 9.0
+        目的:熟悉Swift 3.0的语法变化
 
 ###总结
 - 使用iOS9.0 +  Reference storyboard构建
@@ -17,5 +17,5 @@ A Swift WeiBo Demo
 - 动画事件
 
 ###使用
-Develop分支
-pod installl
+        Develop分支
+        pod installl

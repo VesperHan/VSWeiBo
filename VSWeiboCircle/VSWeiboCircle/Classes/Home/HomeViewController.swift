@@ -25,6 +25,8 @@ class HomeViewController: BaseViewController {
         
         self?.titleBtn.isSelected = present
     }
+    fileprivate lazy var photoBrowserAnimator : PhotoBrowserAnimator = PhotoBrowserAnimator()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -118,11 +120,20 @@ extension HomeViewController {
     
         let indexPath = note.userInfo![ShowPhotoBrowserIndexKey] as! IndexPath
         let picUrls = note.userInfo![ShowPhotoBrowserUrlsKey] as! [NSURL]
+        let object = note.object as! PicCollectionView
         
         let photoBrowserVC = PhotoBrowserController(indexPath: indexPath, picURLs: picUrls as [NSURL])
         
         //自定义转场动画
-        modalPresentationStyle = .custom
+        photoBrowserVC.modalPresentationStyle = .custom
+        
+        //转场动画,先设置谁代理这个转场动画
+        photoBrowserVC.transitioningDelegate = photoBrowserAnimator
+        
+        //转场动画,自定义协议与数据提供
+        photoBrowserAnimator.presentDelegate = object
+        photoBrowserAnimator.dismissDelegate = photoBrowserVC
+        photoBrowserAnimator.indexPath = indexPath
         
         present(photoBrowserVC, animated: true, completion: nil)
     }

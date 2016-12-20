@@ -125,6 +125,28 @@ extension PhotoBrowserController:PhotoBrowserViewDelegate{
     }
 }
 
+extension PhotoBrowserController:AnimatorDismissDelegate{
+
+    func indexPathForDimissView() -> IndexPath {
+        
+        let cell = collectionView.visibleCells.first!
+        return collectionView.indexPath(for: cell)!
+    }
+    
+    func imageViewForDimissView() -> UIImageView {
+        
+        let imageView = UIImageView()
+        let cell = collectionView.visibleCells.first as! PhotoBrowserViewCell
+        imageView.frame = cell.imageView.frame
+        imageView.image = cell.imageView.image
+        
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        
+        return imageView
+    }
+}
+
 extension PhotoBrowserController:UICollectionViewDataSource,UICollectionViewDelegate{
 
 

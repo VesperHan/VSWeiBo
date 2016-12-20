@@ -1,5 +1,6 @@
 # VSWeiBo
-A Swift WeiBo Demo 
+    A Swift WeiBo Demo
+    Vesper Lynd 微博圈
 
 ### 说明
         使用语言:Swift 3.0 iOS 9.0

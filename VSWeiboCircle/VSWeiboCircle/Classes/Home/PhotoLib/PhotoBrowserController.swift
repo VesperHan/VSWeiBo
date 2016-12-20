@@ -82,7 +82,7 @@ extension PhotoBrowserController:PhotoBrowserViewDelegate{
         
         saveBtn.snp.makeConstraints { (make) in
             
-            make.right.equalTo(-20)
+            make.right.equalTo(-40)
             make.bottom.equalTo(closeBtn.snp.bottom)
             make.size.equalTo(closeBtn.snp.size)
         }

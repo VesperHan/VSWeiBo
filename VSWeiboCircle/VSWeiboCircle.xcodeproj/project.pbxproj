@@ -66,7 +66,6 @@
 		F4D2C5E21E028D4200412A95 /* EmoticonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D2C5E11E028D4200412A95 /* EmoticonController.swift */; };
 		F4DC4F881E07E0EA0067F04A /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC4F871E07E0EA0067F04A /* ProgressView.swift */; };
 		F4DC4F8A1E08C4B70067F04A /* PhotoBrowserAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC4F891E08C4B70067F04A /* PhotoBrowserAnimator.swift */; };
-		F4DC4F901E090C2E0067F04A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F4DC4F8F1E090C2E0067F04A /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -141,7 +140,6 @@
 		F4D2C5E11E028D4200412A95 /* EmoticonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonController.swift; sourceTree = "<group>"; };
 		F4DC4F871E07E0EA0067F04A /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		F4DC4F891E08C4B70067F04A /* PhotoBrowserAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBrowserAnimator.swift; sourceTree = "<group>"; };
-		F4DC4F8F1E090C2E0067F04A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,7 +236,6 @@
 		F47585B71DF15BAA008F084D = {
 			isa = PBXGroup;
 			children = (
-				F4DC4F8F1E090C2E0067F04A /* README.md */,
 				F47585C21DF15BAA008F084D /* VSWeiboCircle */,
 				F47585C11DF15BAA008F084D /* Products */,
 				BB0EA95EA65D433E1F2CE910 /* Pods */,
@@ -547,7 +544,6 @@
 				F440107A1DFCF67000028357 /* NSData+Extension.swift in Sources */,
 				F44010611DF79C9500028357 /* VSPresentController.swift in Sources */,
 				F43A1E271E07ACAD005035F7 /* FindEmoticon.swift in Sources */,
-				F4DC4F901E090C2E0067F04A /* README.md in Sources */,
 				F440109C1E00EDA000028357 /* ComposeTextView.swift in Sources */,
 				F44010801DFD336300028357 /* HomeCell.swift in Sources */,
 				F47585DE1DF162AD008F084D /* HomeViewController.swift in Sources */,

@@ -6,7 +6,6 @@
 //  Copyright © 2016年 Vesperlynd. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 extension UIButton{
@@ -42,4 +41,11 @@ extension UIButton{
         sizeToFit()
     }
     
+    convenience init(bgColor : UIColor, fontSize : CGFloat, title : String) {
+        self.init()
+        
+        setTitle(title, for: .normal)
+        backgroundColor = bgColor
+        titleLabel?.font = UIFont.systemFont(ofSize: fontSize)
+    }
 }

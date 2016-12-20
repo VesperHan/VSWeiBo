@@ -28,6 +28,9 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if !isLogin {
+            return
+        }
         setupNav()
         
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -36,6 +39,7 @@ class HomeViewController: BaseViewController {
         setupHeaderView()
         setupFooterView()
         setupTipLabel()
+        setupNotification()
     }
     
     func tmpCodeLayout(){
@@ -88,6 +92,11 @@ extension HomeViewController {
         tipLabel.isHidden = true
         tipLabel.textAlignment = .center
     }
+    
+    fileprivate func setupNotification(){
+    
+        NotificationCenter.default.addObserver(self, selector: #selector(showPhotoLib(note:)), name: NSNotification.Name(rawValue: ShowPhotoBrowserNote), object: nil)
+    }
 }
 
 //事件监听
@@ -103,6 +112,19 @@ extension HomeViewController {
         popOverView.transitioningDelegate = popoverAnimator
         present(popOverView, animated: true, completion: nil)
 
+    }
+    
+    @objc fileprivate func showPhotoLib(note:Notification){
+    
+        let indexPath = note.userInfo![ShowPhotoBrowserIndexKey] as! IndexPath
+        let picUrls = note.userInfo![ShowPhotoBrowserUrlsKey] as! [NSURL]
+        
+        let photoBrowserVC = PhotoBrowserController(indexPath: indexPath, picURLs: picUrls as [NSURL])
+        
+        //自定义转场动画
+        modalPresentationStyle = .custom
+        
+        present(photoBrowserVC, animated: true, completion: nil)
     }
     
     @objc fileprivate func loadNewStatus(){

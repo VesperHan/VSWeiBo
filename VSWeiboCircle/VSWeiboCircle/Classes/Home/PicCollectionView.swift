@@ -23,10 +23,11 @@ class PicCollectionView: UICollectionView {
         super.awakeFromNib()
         
         dataSource = self
+        delegate = self
     }
 }
 
-extension PicCollectionView:UICollectionViewDataSource {
+extension PicCollectionView:UICollectionViewDataSource,UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
@@ -41,6 +42,13 @@ extension PicCollectionView:UICollectionViewDataSource {
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        //view是不能modal控制器的
+        let userInfo = [ShowPhotoBrowserIndexKey : indexPath, ShowPhotoBrowserUrlsKey : picURLs] as [String : Any]
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: ShowPhotoBrowserNote), object: nil, userInfo: userInfo)
+    }
 }
 
 class PicCollectionViewCell: UICollectionViewCell {
@@ -54,7 +62,15 @@ class PicCollectionViewCell: UICollectionViewCell {
                 
                 return
             }
-            iconView.sd_setImage(with: picURL, placeholderImage: #imageLiteral(resourceName: "empty_picture"))
+            iconView.sd_setImage(with: (getBigURL(smallURL: picURL)), placeholderImage: #imageLiteral(resourceName: "empty_picture"))
         }
+    }
+    
+    private func getBigURL(smallURL:URL)->URL{
+        
+        let smallURLString = smallURL.absoluteString
+        let bigURLString = smallURLString.replacingOccurrences(of: "thumbnail", with: "bmiddle")
+        
+        return URL(string: bigURLString)!
     }
 }

@@ -89,7 +89,7 @@ extension HomeViewController {
     fileprivate func setupTipLabel(){
     
         navigationController?.navigationBar.insertSubview(tipLabel, at:0)
-        tipLabel.frame = CGRect(x: 0, y: 10, width: 375, height: 34)
+        tipLabel.frame = CGRect(x: 0, y: 10, width: self.view.frame.size.width, height: 34)
         tipLabel.backgroundColor = UIColor.orange
         tipLabel.isHidden = true
         tipLabel.textAlignment = .center

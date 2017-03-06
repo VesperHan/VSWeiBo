@@ -176,7 +176,7 @@ class EmoticonCollectionViewLayout: UICollectionViewFlowLayout {
         collectionView?.showsHorizontalScrollIndicator = false
         collectionView?.showsVerticalScrollIndicator = false
         
-        let insetMargin = (collectionView!.bounds.height - 3 * itemWH) / 2
-        collectionView?.contentInset = UIEdgeInsets(top: insetMargin, left: 0, bottom: insetMargin, right: 0)
+//        let insetMargin = (collectionView!.bounds.height - 3 * itemWH) / 2
+//        collectionView?.contentInset = UIEdgeInsets(top: insetMargin, left: 0, bottom: insetMargin, right: 0)
     }
 }
